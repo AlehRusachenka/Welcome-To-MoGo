@@ -1,0 +1,6 @@
+.container {
+  padding: 0 15px;
+  max-width: calc(var(--content-width) + var(--mobile-padding) * 2);
+  margin: 0 auto;
+  overflow: hidden;
+}
