@@ -4,7 +4,6 @@
 .work__container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 1fr;
 }
 .work__container .work__item_big {
   grid-column-start: 3;
