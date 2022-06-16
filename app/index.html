@@ -9,12 +9,17 @@
 				Welcome</br> to MoGo
 			</h1>
 			<a class="promo__link" href="#">learn more</a>
-			<div class="promo__navigation">
-				<p class="promo__text"><span>01</span>intro</p>
-				<p class="promo__text"><span>02</span>worck</p>
-				<p class="promo__text"><span>03</span>about</p>
-				<p class="promo__text"><span>04</span>contacts</p>
-			</div>
+			<section class="splide" aria-label="Splide Basic HTML Example">
+				<div class="splide__track">
+					<ul class="splide__list">
+						<li class="splide__slide">
+							slide #1
+						</li>
+						<li class="splide__slide">Slide #2</li>
+						<li class="splide__slide">Slide #3</li>
+					</ul>
+				</div>
+			</section>
 		</div>
 	</section>
 	<!-- Promo End -->
@@ -90,19 +95,34 @@
 		<div class="container">
 			<div class="futures__row">
 				<div class="futures__card">
-					<p class="futures__text"><span>42</span>Lorem ipsum</p>
+					<div class="futures__card-info ">
+						<p class="futures__card-number">42</p>
+						<p class="futures__card-text">Lorem ipsum</p>
+					</div>
 				</div>
 				<div class="futures__card">
-					<p class="futures__text"><span>42</span>Lorem ipsum</p>
+					<div class="futures__card-info ">
+						<p class="futures__card-number">123</p>
+						<p class="futures__card-text">Lorem ipsum</p>
+					</div>
 				</div>
 				<div class="futures__card">
-					<p class="futures__text"><span>42</span>Lorem ipsum</p>
+					<div class="futures__card-info ">
+						<p class="futures__card-number">15</p>
+						<p class="futures__card-text">Lorem ipsum</p>
+					</div>
 				</div>
 				<div class="futures__card">
-					<p class="futures__text"><span>42</span>Lorem ipsum</p>
+					<div class="futures__card-info ">
+						<p class="futures__card-number">99</p>
+						<p class="futures__card-text">Lorem ipsum</p>
+					</div>
 				</div>
 				<div class="futures__card">
-					<p class="futures__text"><span>42</span>Lorem ipsum</p>
+					<div class="futures__card-info ">
+						<p class="futures__card-number">24</p>
+						<p class="futures__card-text">Lorem ipsum</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -213,6 +233,11 @@
 				<p class="section-head__subtitle">Who we are</p>
 				<h2 class="section-head__title">meet our team</h2>
 			</div>
+			<h2 class="about-us__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu facilisis sed
+				venenatis
+				lacus. Eget sit ridiculus facilisi amet. Dis sapien ipsum enim dui fermentum viverra dolor sit. Aliquet
+				congue
+				sit fermentum risus feugiat.</h2>
 			<div class="row">
 				<div class="team__cards col-4 col-xs-12">
 					<div class="team__content">
@@ -325,8 +350,110 @@
 			</div>
 		</div>
 	</section>
-
 	<!-- Partners End -->
+
+	<!-- Our work Start -->
+	<section class="work">
+		<div class="container">
+			<div class="section-head">
+				<p class="section-head__subtitle">What we do</p>
+				<h2 class="section-head__title">some of our work</h2>
+			</div>
+			<h2 class="about-us__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu facilisis sed
+				venenatis
+				lacus. Eget sit ridiculus facilisi amet. Dis sapien ipsum enim dui fermentum viverra dolor sit. Aliquet
+				congue
+				sit fermentum risus feugiat.</h2>
+		</div>
+		<div class="work__container">
+			<div class="work__item">
+				<img src="./images/work/work_01.jpg" alt="building" class="work__item-image">
+				<div class="work__item-block">
+					<a href="#!" class="work__item-link">
+						<img class="work__item-pic" src="./images/work/icons.svg" alt="work_icon">
+						<div class="work__item-content">
+							<p class="work__item-headline">creatively design</p>
+							<p class="work__item-text">Lorem ipsum dolor sit</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="work__item">
+				<img src="./images/work/work_06.jpg" alt="building" class="work__item-image">
+				<div class="work__item-block">
+					<a href="#!" class="work__item-link">
+						<img class="work__item-pic" src="./images/work/icons.svg" alt="work_icon">
+						<div class="work__item-content">
+							<p class="work__item-headline">creatively design</p>
+							<p class="work__item-text">Lorem ipsum dolor sit</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="work__item work__item_big">
+				<img src="./images/work/work_03.jpg" alt="building" class="work__item-image ">
+				<div class="work__item-block">
+					<a href="#!" class="work__item-link">
+						<img class="work__item-pic" src="./images/work/icons.svg" alt="work_icon">
+						<div class="work__item-content">
+							<p class="work__item-headline">creatively design</p>
+							<p class="work__item-text">Lorem ipsum dolor sit</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="work__item">
+				<img src="./images/work/work_05.jpg" alt="building" class="work__item-image">
+				<div class="work__item-block">
+					<a href="#!" class="work__item-link">
+						<img class="work__item-pic" src="./images/work/icons.svg" alt="work_icon">
+						<div class="work__item-content">
+							<p class="work__item-headline">creatively design</p>
+							<p class="work__item-text">Lorem ipsum dolor sit</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="work__item">
+				<img src="./images/work/work_02.jpg" alt="building" class="work__item-image">
+				<div class="work__item-block">
+					<a href="#!" class="work__item-link">
+						<img class="work__item-pic" src="./images/work/icons.svg" alt="work_icon">
+						<div class="work__item-content">
+							<p class="work__item-headline">creatively design</p>
+							<p class="work__item-text">Lorem ipsum dolor sit</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="work__item">
+				<img src="./images/work/work_07.jpg" alt="building" class="work__item-image">
+				<div class="work__item-block">
+					<a href="#!" class="work__item-link">
+						<img class="work__item-pic" src="./images/work/icons.svg" alt="work_icon">
+						<div class="work__item-content">
+							<p class="work__item-headline">creatively design</p>
+							<p class="work__item-text">Lorem ipsum dolor sit</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="work__item">
+				<img src="./images/work/work_04.jpg" alt="building" class="work__item-image">
+				<div class="work__item-block">
+					<a href="#!" class="work__item-link">
+						<img class="work__item-pic" src="./images/work/icons.svg" alt="work_icon">
+						<div class="work__item-content">
+							<p class="work__item-headline">creatively design</p>
+							<p class="work__item-text">Lorem ipsum dolor sit</p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Our work End -->
 
 	<!-- Reviews Start -->
 	<section class="reviews">

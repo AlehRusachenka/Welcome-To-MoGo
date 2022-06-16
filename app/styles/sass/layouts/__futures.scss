@@ -1,13 +1,32 @@
 .futures {
+  // padding: 60px 0;
   background-color: var(--bg-color);
-}
-.container {
 }
 .futures__row {
   display: flex;
 }
 .futures__card {
+  border-right: 2px solid var(--secondary-color);
 }
-.futures__text {
-  color: black;
+.futures__card:first-child {
+  border-left: 2px solid var(--secondary-color);
+}
+
+.futures__card-info {
+  text-align: center;
+  padding: 30px 60px;
+}
+.futures__card-text {
+  text-align: center;
+  font-size: 24;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--secondary-color);
+}
+
+.futures__card-number {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
 }

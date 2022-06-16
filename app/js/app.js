@@ -1,7 +1,11 @@
 // // Import vendor jQuery plugin example
 // import '~/app/libs/mmenu/dist/mmenu.js'
+import Splide from "@splidejs/splide";
 
 document.addEventListener("DOMContentLoaded", () => {
+  var splide = new Splide(".splide");
+  splide.mount();
+
   let header = document.querySelector(".header");
 
   document.addEventListener("scroll", () => {
