@@ -1,13 +1,16 @@
 .slider-reviews__card {
   display: flex;
 }
+
 .slider-reviews__card-icon {
   width: 170px;
   flex-shrink: 0;
 }
+
 .slider-reviews__card-content {
   padding-left: 30px;
 }
+
 .slider-reviews__card-text {
   font-weight: 500;
   font-size: 24px;
@@ -16,6 +19,7 @@
   margin-bottom: 26px;
   line-height: 1.5;
 }
+
 .slider-reviews__card-author {
   color: var(--primary-color);
   font-family: "Kaushan Script";
