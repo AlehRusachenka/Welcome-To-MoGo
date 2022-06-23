@@ -4,12 +4,3 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-
-.blog__title {
-  color: var(--accent-color);
-}
-@media (max-width: 1200px) {
-  .blog__title {
-    font-size: 24px;
-  }
-}

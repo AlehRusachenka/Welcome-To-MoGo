@@ -1,38 +1,68 @@
-.slider-reviews__card {
-  display: flex;
-}
+.slider-reviews {
+  &__card {
+    display: flex;
+    align-items: flex-start;
+  }
 
-.slider-reviews__card-icon {
-  width: 170px;
-  flex-shrink: 0;
-}
+  &__card-icon {
+    width: 170px;
+    flex-shrink: 0;
 
-.slider-reviews__card-content {
-  padding-left: 30px;
-}
+    @include breakpoint(md) {
+      width: 115px;
+      align-self: center;
+    }
 
-.slider-reviews__card-text {
-  font-weight: 500;
-  font-size: 24px;
-  color: var(--text-color);
-  font-style: italic;
-  margin-bottom: 26px;
-  line-height: 1.5;
-}
+    @include breakpoint(sm) {
+      display: none;
+    }
+  }
 
-.slider-reviews__card-author {
-  color: var(--primary-color);
-  font-family: "Kaushan Script";
-  font-size: 30px;
-  font-weight: 400px;
-}
+  &__card-content {
+    padding-left: 30px;
+    @include breakpoint(sm) {
+      padding-left: 0;
+    }
+  }
 
-.slider-reviews__card-author::before {
-  content: "";
-  display: inline-block;
-  margin-right: 56px;
-  width: 70px;
-  height: 4px;
-  background: var(--accent-color);
-  vertical-align: middle;
+  &__card-text {
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--text-color);
+    font-style: italic;
+    margin-bottom: 26px;
+    line-height: 1.5;
+    @include breakpoint(xl) {
+      font-size: 18px;
+    }
+    @include breakpoint(sm) {
+      font-size: 14px;
+    }
+  }
+
+  &__card-author {
+    color: var(--primary-color);
+    font-family: "Kaushan Script";
+    font-size: 30px;
+    font-weight: 400px;
+
+    @include breakpoint(xl) {
+      font-size: 24px;
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      margin-right: 56px;
+      width: 70px;
+      height: 4px;
+      background: var(--accent-color);
+      vertical-align: middle;
+
+      @include breakpoint(xl) {
+        width: 47px;
+        margin-right: 37px;
+      }
+    }
+  }
 }

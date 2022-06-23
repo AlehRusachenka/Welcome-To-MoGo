@@ -1,34 +1,61 @@
 .devices {
-  padding-bottom: 50px;
-  background-image: linear-gradient(
+  background: linear-gradient(
       360deg,
       rgba(255, 255, 255, 0.8) 0%,
       rgba(255, 255, 255, 0.8) 100%
     ),
-    url("../images/dist/devices/devices_bg.jpg");
+    url("../../../images/dist/devices/devices_bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  padding-bottom: 57px;
   position: relative;
-}
+  @include breakpoint(xl) {
+    padding-bottom: 50px;
+  }
 
-.devices__mobile-pic {
-  position: absolute;
-  bottom: -50px;
-  right: 350px;
-}
+  &__head {
+    margin-bottom: 60px;
+    @include breakpoint(lg) {
+      margin-bottom: 36px;
+    }
+  }
 
-.devices__content {
-  position: relative;
-}
+  &__content {
+    min-width: 445px;
+    @include breakpoint(lg) {
+      min-width: 400px;
+    }
+    @include breakpoint(md) {
+      min-width: 200px;
+    }
+  }
 
-.devices__tablet-pic {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  &__tablet-pic {
+    margin: 0 auto;
+  }
 
-.devices__cage-pic {
-  position: relative;
+  &__mobile-pic {
+    max-width: 200px;
+    position: absolute;
+    bottom: -110px;
+    right: 300px;
+    @include breakpoint(xl) {
+      right: 120px;
+    }
+    @include breakpoint(lg) {
+      max-width: 170px;
+      right: 100px;
+      bottom: -60px;
+    }
+    @include breakpoint(md) {
+      right: 40px;
+      max-width: 140px;
+    }
+    @include breakpoint(sm) {
+      right: 20px;
+      max-width: 110px;
+      bottom: -30px;
+    }
+  }
 }

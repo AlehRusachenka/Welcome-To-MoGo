@@ -20,10 +20,6 @@ html {
   line-height: 1.4;
 }
 
-body {
-  margin: 0 auto;
-}
-
 p,
 h1,
 h2,
@@ -33,7 +29,7 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 0;
-  color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 button {

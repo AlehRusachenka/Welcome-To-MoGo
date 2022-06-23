@@ -1,32 +1,65 @@
 .futures {
-  // padding: 60px 0;
   background-color: var(--bg-color);
-}
-.futures__row {
-  display: flex;
-}
-.futures__card {
-  border-right: 2px solid var(--secondary-color);
-}
-.futures__card:first-child {
-  border-left: 2px solid var(--secondary-color);
-}
 
-.futures__card-info {
-  text-align: center;
-  padding: 30px 60px;
-}
-.futures__card-text {
-  text-align: center;
-  font-size: 24;
-  font-weight: 500;
-  line-height: 1.2;
-  color: var(--secondary-color);
-}
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include breakpoint(sm) {
+      flex-wrap: wrap;
+    }
+  }
 
-.futures__card-number {
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 10px;
+  &__card {
+    border-right: 2px solid var(--secondary-color);
+    &:first-child {
+      border-left: 2px solid var(--secondary-color);
+      @include breakpoint(sm) {
+        border: none;
+        border-bottom: 2px solid var(--secondary-color);
+      }
+    }
+    @include breakpoint(sm) {
+      border: none;
+      border-bottom: 2px solid var(--secondary-color);
+    }
+  }
+
+  &__card-info {
+    text-align: center;
+    padding: 30px 60px;
+    @include breakpoint(xl) {
+      padding: 20px 40px;
+    }
+    @include breakpoint(lg) {
+      padding: 10px 20px;
+    }
+    @include breakpoint(sm) {
+      padding: 0px 0px;
+    }
+  }
+  &__card-text {
+    text-align: center;
+    font-size: 24;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--secondary-color);
+    @include breakpoint(sm) {
+      padding-bottom: 15px;
+    }
+  }
+
+  &__card-number {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+    @include breakpoint(lg) {
+      font-size: 52px;
+    }
+    @include breakpoint(md) {
+      font-size: 44px;
+    }
+  }
 }

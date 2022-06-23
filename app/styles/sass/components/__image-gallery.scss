@@ -3,24 +3,25 @@
   flex-wrap: wrap;
   column-gap: 2px;
   row-gap: 2px;
-}
-.image-gallery__item {
-  display: inline-block;
-  width: calc(100% / 12 * 4 - 2px);
-  position: relative;
-  padding-bottom: calc(100% / 12 * 4 - 2px);
-  overflow: hidden;
-}
 
-.image-gallery__image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  object-fit: cover;
-  /* Another approach */
-  /* min-height: 100%;
-    min-width: 100%;
-    max-width: initial; */
+  &__item {
+    display: inline-block;
+    width: calc(100% / 12 * 4 - 2px);
+    position: relative;
+    padding-bottom: calc(100% / 12 * 4 - 2px);
+    overflow: hidden;
+  }
+
+  &__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    object-fit: cover;
+    /* Another approach */
+    /* min-height: 100%;
+      min-width: 100%;
+      max-width: initial; */
+  }
 }

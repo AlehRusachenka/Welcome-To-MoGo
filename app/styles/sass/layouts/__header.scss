@@ -6,51 +6,99 @@
   padding-top: 40px;
   padding-bottom: 40px;
   z-index: 999;
-}
+  @include breakpoint(md) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
-.header_has-bg {
-  background: var(--accent-color);
-}
+  &_has-bg {
+    background: var(--accent-color);
+  }
 
-.header__inner {
-  display: flex;
-}
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
 
-.header__nav {
-  margin-left: auto;
-}
-.header__menu {
-  display: flex;
-  list-style: none;
-}
+  &__logo-link {
+    z-index: 1;
+  }
 
-.header__menu-item {
-  margin-right: 40px;
-}
+  &__nav {
+    margin-left: auto;
+    @include breakpoint(md) {
+      display: none;
+    }
+    &_opened {
+      @include breakpoint(md) {
+        display: block;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-image: linear-gradient(
+            360deg,
+            rgba(237, 215, 137, 0.9) 0%,
+            rgba(233, 130, 131, 0.9) 100%
+          ),
+          url("../images/dist/promobg.jpg");
+        background-size: cover, cover;
+        background-repeat: no-repeat, no-repeat;
+        background-position: center center;
 
-.header__menu-item_active .header__menu-link {
-  color: #f4bf87;
-  position: relative;
-}
+        .header__menu {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+        }
+      }
+    }
+  }
 
-.header__menu-item_active .header__menu-link::after {
-  content: "";
-  position: absolute;
-  background: #f4bf87;
-  width: 150%;
-  height: 3px;
-  bottom: -5px;
-  left: 50%;
-  transform: translatex(-50%);
-}
+  &__menu {
+    display: flex;
+    list-style: none;
+  }
 
-.header__menu-link {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: var(--secondary-color);
-  transition: all 1s ease 0s;
-}
+  &__menu-item {
+    margin-right: 40px;
+    @include breakpoint(md) {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+    &_active .header__menu-link {
+      color: #f4bf87;
+      position: relative;
+    }
+    &_active .header__menu-link::after {
+      content: "";
+      position: absolute;
+      background: #f4bf87;
+      width: 150%;
+      height: 3px;
+      bottom: -5px;
+      left: 50%;
+      transform: translatex(-50%);
+    }
+  }
 
-.header__menu-link:hover {
-  color: #f4bf87;
+  &__menu-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: all 1s ease 0s;
+
+    &__menu-link:hover {
+      color: #f4bf87;
+    }
+  }
+  &__burger {
+    display: none;
+    @include breakpoint(md) {
+      display: flex;
+      margin-left: auto;
+    }
+  }
 }

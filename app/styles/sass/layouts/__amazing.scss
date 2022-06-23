@@ -1,65 +1,65 @@
 .amazing {
   padding-top: 50px;
-}
-
-@media (max-width: 1200px) {
-  .amazing {
-    padding-top: 58px;
+  padding-bottom: 20px;
+  @include breakpoint(xl) {
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
-}
 
-.amazing__card {
-  margin: 0 15px;
-  width: calc(100% / 3 - 30px);
-  display: flex;
-  margin-bottom: 70px;
-  margin-top: 70px;
-}
-
-@media (max-width: 1200px) {
-}
-
-.amazing__card-img {
-  width: 55px;
-  height: 55px;
-  flex-shrink: 0;
-  align-self: flex-start;
-}
-@media (max-width: 1200px) {
-  .col-lg-6 {
-    margin: 0 15px;
-    width: calc(100% / 12 * 6 - var(--gutter) * 2);
+  &__head {
+    margin-bottom: 10px;
+    @include breakpoint(xl) {
+      margin-bottom: 40px;
+    }
   }
-}
-@media (max-width: 992px) {
-}
 
-@media (max-width: 992px) {
-  .col-md-6 {
-    margin: 0 15px;
-    width: calc(100 / 12 * 4 - var(--gutter) * 2);
+  &__card {
+    display: flex;
+    margin-bottom: 70px;
+    margin-top: 70px;
+    @include breakpoint(xl) {
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+    @include breakpoint(sm) {
+      margin-bottom: 16px;
+      margin-top: 16px;
+    }
   }
-}
 
-.amazing__info {
-  margin-left: 30px;
-}
+  &__card-img {
+    width: 70px;
+    flex-shrink: 0;
+    align-self: flex-start;
+    @include breakpoint(xl) {
+      width: 60px;
+    }
+  }
 
-.amazing__card-name {
-  font-family: "Raleway";
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
-  color: var(--primary-color);
-  padding: 15px 0;
-}
+  &__card-info {
+    padding-left: 30px;
+    @include breakpoint(xl) {
+      padding-left: 25px;
+    }
+  }
 
-.amazing__card-desc {
-  font-family: "Raleway";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.2;
-  color: var(--primary-color);
+  &__card-name {
+    padding: 10px 0;
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    @include breakpoint(xl) {
+      font-size: 18px;
+    }
+  }
+
+  &__card-desc {
+    font-size: 18px;
+    padding: 5px 0;
+    color: var(--text-color);
+    @include breakpoint(xl) {
+      font-size: 14px;
+    }
+  }
 }
