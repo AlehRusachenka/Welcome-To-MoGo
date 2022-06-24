@@ -5,6 +5,12 @@
     @include breakpoint(lg) {
       margin-bottom: 30px;
     }
+    @include breakpoint(md) {
+      margin-bottom: 30px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__content {
