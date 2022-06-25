@@ -26,6 +26,11 @@
       left: -15px;
       transition: 0.4s linear;
       opacity: 1;
+      @include breakpoint(md) {
+        top: 0px;
+        left: 0px;
+        background: none;
+      }
     }
   }
 
@@ -57,14 +62,23 @@
       rgba(233, 130, 131, 0.9) 100%
     );
     opacity: 0;
+    @include breakpoint(md) {
+      background: none;
+      opacity: 1;
+    }
   }
 
   &__content-images {
     display: flex;
     position: absolute;
-    top: 50%;
+    bottom: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include breakpoint(md) {
+      left: 0;
+      bottom: 0;
+      transform: none;
+    }
   }
 
   &__content-img {

@@ -1,14 +1,23 @@
 .partners {
   padding: 50px 0px;
   background-color: #f8f8f8;
+  @include breakpoint(sm) {
+    padding: 25px 0px;
+  }
 
   &_row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    align-self: center;
   }
 
   &__img {
+    margin: 0 auto;
     width: 80px;
     height: 80px;
   }

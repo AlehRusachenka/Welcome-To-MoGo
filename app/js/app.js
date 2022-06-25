@@ -101,3 +101,37 @@ document.addEventListener("DOMContentLoaded", () => {
     headerNav.classList.toggle("header__nav_opened");
   });
 });
+
+// Services accordion
+
+class ItcAccordion {
+  constructor(target, config) {
+    this._el =
+      typeof target === "string" ? document.querySelector(target) : target;
+    const defaultConfig = {
+      alwaysOpen: true,
+    };
+    this._config = Object.assign(defaultConfig, config);
+    this.addEventListener();
+  }
+  addEventListener() {
+    this._el.addEventListener("click", (e) => {
+      const elHeader = e.target.closest(".services__header");
+      if (!elHeader) {
+        return;
+      }
+      if (!this._config.alwaysOpen) {
+        const elOpenItem = this._el.querySelector(".services__item_show");
+        if (elOpenItem) {
+          elOpenItem !== elHeader.parentElement
+            ? elOpenItem.classList.toggle("services__itemem_show")
+            : null;
+        }
+      }
+      elHeader.parentElement.classList.toggle("services__item_show");
+    });
+  }
+}
+
+new ItcAccordion("#accordion-1");
+new ItcAccordion("#accordion-2");

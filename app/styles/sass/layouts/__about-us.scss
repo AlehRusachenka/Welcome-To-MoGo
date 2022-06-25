@@ -27,6 +27,10 @@
       left: -15px;
       transition: 0.4s linear;
       opacity: 1;
+      @include breakpoint(sm) {
+        bottom: 0px;
+        left: 0px;
+      }
     }
   }
 
@@ -81,7 +85,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     @include breakpoint(sm) {
-      top: 20px;
+      top: 10%;
     }
   }
 

@@ -1,50 +1,130 @@
 .services {
   padding: 50px 0px 114px 0px;
+  @include breakpoint(lg) {
+    padding: 36px 0px 88px 0px;
+  }
+  @include breakpoint(md) {
+    padding: 28px 0px 78px 0px;
+  }
 
-  &__card-content {
-    margin-bottom: 22px;
-    &:last-child {
-      margin-bottom: 0px;
+  &__card {
+    @include breakpoint(sm) {
+      margin-bottom: 30px;
     }
   }
 
-  &__card-block {
+  &__accordion {
+    max-width: 570px;
+    @include breakpoint(lg) {
+      max-width: 480px;
+    }
+    @include breakpoint(md) {
+      max-width: 450px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 22px;
+    @include breakpoint(lg) {
+      margin-bottom: 18px;
+    }
+    @include breakpoint(md) {
+      margin-bottom: 12px;
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &_show .services__header::after {
+      transform: rotate(-180deg);
+    }
+
+    &:not(.services__item_show) .services__text {
+      display: none;
+    }
+  }
+
+  &__header {
     display: flex;
-    border: 1px solid var(--text-color);
-    padding: 15px 30px;
+    justify-content: space-between;
     align-items: center;
+    padding: 14px 16px;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+    @include breakpoint(md) {
+      padding: 10px 12px;
+    }
+
+    &:hover {
+      background-color: var(--accent-color);
+    }
+
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      margin-left: auto;
+      background-image: url("../../../images/dist/services/arrow_down.svg");
+      background-repeat: no-repeat;
+      background-size: 1.25rem;
+    }
   }
 
   &__card-pic {
     width: 42px;
-    height: 42px;
+    @include breakpoint(lg) {
+      width: 35px;
+    }
   }
 
-  &__card-title {
+  &__title {
+    padding-left: 40px;
     font-weight: 700;
     font-size: 24px;
     line-height: 1.2;
     text-transform: uppercase;
     color: var(--primary-color);
-    padding-left: 40px;
-    align-items: center;
+    @include breakpoint(lg) {
+      font-size: 18px;
+    }
+    @include breakpoint(md) {
+      font-size: 15px;
+      padding-left: 15px;
+    }
   }
 
-  &__card-arrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__card-text {
-    //   display: none;
-    max-height: 100px;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.2;
-    color: var(--primary-color);
-    border: 1px solid var(--text-color);
-    padding: 15px 30px;
+  &__text {
+    padding: 14px 16px;
+    max-height: 190px;
     overflow-y: scroll;
+    background: #fff;
+    font-size: 18px;
+    @include breakpoint(lg) {
+      font-size: 14px;
+      max-height: 125px;
+    }
+    @include breakpoint(md) {
+      font-size: 12px;
+      max-height: 70px;
+    }
+
+    &_scroll {
+      border: 1px solid var(--text-color);
+      border-top: none;
+    }
+
+    &_scroll::-webkit-scrollbar {
+      width: 7px;
+    }
+    &_scroll::-webkit-scrollbar-track {
+      background: #f5f5f5;
+    }
+    &_scroll::-webkit-scrollbar-thumb {
+      background: var(--bg-color);
+    }
   }
 }
